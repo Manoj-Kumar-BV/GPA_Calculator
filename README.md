@@ -1,4 +1,3 @@
-
 ```
 # GPA Calculator
 
