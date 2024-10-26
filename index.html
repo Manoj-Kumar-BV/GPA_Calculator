@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <h1>CGPA Calculator</h1>
+
+    <label for="studentType">Select Student Type:</label>
+    <select id="studentType">
+        <option value="">Select</option>
+        <option value="regular">Regular</option>
+        <option value="diploma">Diploma</option>
+    </select>
+
+    <div id="semesterInputForm" style="display: none;">
+        <div id="semesterFields"></div>
+        <button id="calculateBtn">Calculate CGPA</button>
+
+        <div id="sgpaLink">
+            <p>If you don't know your semester GPA, calculate SGPA here: 
+                <a href="sgpa_calculator.html" target="_blank">SGPA Calculator</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="result"></div>
+</body>
+</html>
