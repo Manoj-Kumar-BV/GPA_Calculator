@@ -1,3 +1,4 @@
+
 ```markdown
 # GPA Calculator
 
@@ -28,5 +29,4 @@ git clone https://github.com/Manoj-Kumar-BV/GPA_Calculator.git
 4. **Calculate CGPA**: Click the "Calculate CGPA" button to see your results.
 
 5. **Calculate SGPA**: If needed, follow the link provided in the CGPA Calculator to calculate your SGPA.
-
 ```
