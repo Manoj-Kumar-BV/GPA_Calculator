@@ -1,5 +1,3 @@
-Here’s a simplified README file including the website link, overview, how to clone the repository, and how to use it:
-
 ```markdown
 # GPA Calculator
 
