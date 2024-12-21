@@ -8,26 +8,28 @@
     <script defer src="scripts.js"></script>
 </head>
 <body>
-    <h1>CGPA Calculator</h1>
+    <div class="container">
+        <h1>CGPA Calculator</h1>
 
-    <label for="studentType">Select Student Type:</label>
-    <select id="studentType">
-        <option value="">Select</option>
-        <option value="regular">Regular</option>
-        <option value="diploma">Diploma</option>
-    </select>
+        <label for="studentType">Select Student Type:</label>
+        <select id="studentType">
+            <option value="">Select</option>
+            <option value="regular">Regular</option>
+            <option value="diploma">Diploma</option>
+        </select>
 
-    <div id="semesterInputForm" style="display: none;">
-        <div id="semesterFields"></div>
-        <button id="calculateBtn">Calculate CGPA</button>
+        <div id="semesterInputForm" style="display: none;">
+            <div id="semesterFields"></div>
+            <button id="calculateBtn">Calculate CGPA</button>
 
-        <div id="sgpaLink">
-            <p>If you don't know your semester GPA, calculate SGPA here: 
-                <a href="sgpa_calculator.html" target="_blank">SGPA Calculator</a>
-            </p>
+            <div id="sgpaLink">
+                <p>If you don't know your semester GPA, calculate SGPA here: 
+                    <a href="sgpa_calculator.html" target="_blank">SGPA Calculator</a>
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div id="result"></div>
+        <div id="result"></div>
+    </div>
 </body>
 </html>
