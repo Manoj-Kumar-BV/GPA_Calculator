@@ -1,60 +1,279 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 h1 {
-    color: #1e90ff;
+    color: #4a5568;
     text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    color: #2d3748;
+    font-size: 1.8em;
+    margin: 20px 0;
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 15px 0 8px;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 1.1em;
 }
 
-select, input[type="number"], button {
+select, input[type="number"] {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 15px;
+    margin: 8px 0 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+    box-sizing: border-box;
+}
+
+select:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: #fff;
 }
 
 button {
-    background-color: #1e90ff;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: #fff;
     border: none;
+    border-radius: 12px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 button:hover {
-    background-color: #1c86ee;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.deleteBtn {
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+    width: auto;
+    padding: 8px 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.deleteBtn:hover {
+    background: linear-gradient(135deg, #c53030, #a02622);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.button-group button {
+    flex: 1;
+}
+
+.form-section {
+    margin-bottom: 25px;
+}
+
+/* Input validation styles */
+input:invalid {
+    border-color: #e53e3e;
+}
+
+input:valid {
+    border-color: #48bb78;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.semester, .subject {
+    background: #f8fafc;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.semester:hover, .subject:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.semester h3, .subject h3 {
+    color: #4a5568;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+#sgpaLink {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 #sgpaLink p {
-    text-align: center;
+    margin: 0;
+    font-size: 1.1em;
+    color: #4a5568;
+}
+
+#sgpaLink a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#sgpaLink a:hover {
+    color: #764ba2;
+    text-decoration: underline;
 }
 
 #result, #totalCredits, #totalGradePoints, #gpaResult {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-@media (max-width: 600px) {
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading animation for buttons */
+button.loading {
+    position: relative;
+    color: transparent;
+}
+
+button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
     .container {
+        margin: 10px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .semester, .subject {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
         padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    select, input[type="number"], button {
+        padding: 12px;
     }
 }
